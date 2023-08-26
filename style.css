@@ -1,0 +1,426 @@
+:root {
+    --shadow: 0 5px 5px rgb(0 0 0 / 0.7);
+    --primary: rgb(2, 103, 255);
+    --bgBtn: rgba(116, 202, 255, 0.5);
+    --shadowBtnMenu: -1.5px 3px 1.5px rgb(2, 171, 255),
+        1.5px 3px 1.5px rgb(2, 171, 255);
+    --shadowBtnPrimary: -1.5px -1.5px 1.5px rgb(2, 171, 255),
+        1.5px 1.5px 1.5px rgb(2, 171, 255);
+}
+
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.jumbotron {
+    background-image: url(img/bgjumb2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #fff;
+    position: relative;
+}
+
+.jumbotron:before {
+    content: "";
+    width: 100%;
+    height: 30vh;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, rgb(225, 249, 250), rgba(72, 203, 212, 0));
+    position: absolute;
+}
+
+.jumbotron h1,
+.jumbotron p {
+    text-shadow: var(--shadow);
+}
+
+.link-start {
+    margin-top: 3rem;
+}
+
+.link-start a {
+    width: 20rem;
+    background-color: rgba(116, 202, 255, 0.5);
+    box-shadow: -2px -2px 2px 2px rgba(0, 0, 0, 0.3),
+        2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    font-size: 2rem;
+    padding: 1rem;
+    color: black;
+    border-radius: 5%;
+    font-weight: 700;
+    display: inline-block;
+    text-decoration: none;
+    transition: .1s;
+}
+
+.link-start a:hover {
+    transform: scale(97%);
+    box-shadow: none;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    position: sticky;
+    z-index: 9999;
+}
+
+
+nav .menu {
+    width: 100%;
+    height: 5rem;
+    text-align: center;
+    line-height: 3rem;
+    position: relative;
+    z-index: -1;
+    backdrop-filter: blur(1px);
+
+}
+
+nav .menu p {
+    color: black;
+    text-decoration: none;
+    border-top: none;
+    border-radius: 0 0 45% 45%;
+    display: inline-block;
+    height: 50%;
+    text-align: center;
+    line-height: 190%;
+    box-shadow: -1.5px 3px 1.5px rgb(2, 171, 255),
+        1.5px 3px 1.5px rgb(2, 171, 255);
+    width: 5rem;
+    position: relative;
+    top: 1rem;
+    background: linear-gradient(to top, rgb(206, 236, 255), rgba(234, 254, 255, .5));
+    cursor: pointer;
+    transition: .1s;
+    font-size: 1.3rem;
+}
+
+nav .menu p:hover {
+    transform: scale(97%);
+    box-shadow: none;
+}
+
+nav #nav-ul {
+    background-color: rgba(234, 254, 255, .3);
+    align-items: center;
+    list-style-type: none;
+    transition: 0.2s ease-out;
+    box-shadow: -1.5px 3px 1.5px rgb(2, 171, 255),
+        1.5px 3px 1.5px rgb(2, 171, 255);
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    padding: 2.5rem 3rem;
+    border-radius: 0 0 45% 45%;
+    position: absolute;
+    top: -3.5rem;
+    display: flex;
+    transition: .3s;
+    visibility: visible;
+    opacity: 0;
+}
+
+nav #nav-ul.active {
+    transform: translateY(8.5rem);
+    background-color: rgba(234, 254, 255, 0.5);
+    visibility: visible;
+    opacity: 1;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    box-shadow: 0 0.5px 3px rgb(0 0 0 / 0.7);
+    background-color: rgb(255 255 255 / 0.5);
+    border-radius: 10%;
+    font-size: 1.2rem;
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+    margin: 0 0.5rem;
+    transition: .5s;
+}
+
+nav ul li a:hover {
+    background-color: none;
+    box-shadow: none;
+}
+
+.Hero {
+    background-color: rgb(225, 249, 250);
+    margin-top: -5rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    position: relative;
+    overflow-x: hidden;
+
+}
+
+.Hero::before {
+    content: "";
+    width: 100%;
+    height: 30vh;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+    position: absolute;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-left h1 span {
+    color: var(--primary);
+}
+
+.hero-left .hero-ig a {
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    padding: 1.5rem 3rem;
+    font-size: 1.5rem;
+    line-height: 50%;
+    background-color: var(--bgBtn);
+    box-shadow: var(--shadow);
+    border-radius: 10%;
+    margin-top: 1rem;
+    transition: .1s;
+}
+
+.hero-left .hero-ig a:hover {
+    box-shadow: none;
+    transform: scale(99%);
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-right img {
+    width: 500px;
+}
+
+/* Profil */
+
+.Profile {
+    min-height: 100vh;
+    position: relative;
+}
+
+
+.Profile .card-body {
+    background-color: rgb(225, 249, 250);
+    box-shadow: var(--shadow);
+}
+
+.Profile::before {
+    content: "";
+    width: 100%;
+    height: 30vh;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, rgb(225, 249, 250), rgba(255, 249, 250, 0));
+    position: absolute;
+}
+
+
+/* Project */
+.Project {
+    min-height: 100vh;
+    padding: 6rem 0;
+    background-color: rgb(225, 249, 250);
+    position: relative;
+}
+
+.Project::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30vh;
+    background: linear-gradient(to top, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+}
+
+.Project .card {
+    box-shadow: var(--shadow);
+}
+
+.Project .card a {
+    background-color: rgb(225, 249, 250);
+    font-size: 1.1rem;
+    font-weight: 500;
+    box-shadow: var(--shadowBtnPrimary);
+    transition: .1s;
+}
+
+.Project .card a:hover {
+    box-shadow: none;
+    transform: scale(99%);
+}
+
+/* contact */
+.Contact {
+    min-height: 100vh;
+    position: relative;
+}
+
+.Contact::before {
+    content: "";
+    width: 100%;
+    height: 10vh;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, rgb(225, 249, 250), rgba(255, 249, 250, 0));
+    position: absolute;
+}
+
+.Contact .contact-top {
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 0.7),
+        0px 0px 5px rgb(0 0 0 / 0.7);
+    padding: 1rem;
+}
+
+.Contact form {
+    padding: 2rem 0;
+}
+
+.Contact .input-grup {
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Contact .input-grup i {
+    margin-right: 1rem;
+}
+
+.Contact .input-grup input,
+.Contact .input-grup textarea {
+    padding: 0 0.5rem;
+    width: 80%;
+}
+
+.Contact form button {
+    background-color: rgb(225, 249, 250);
+    box-shadow: var(--shadow);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 10%;
+    transition: .1s;
+}
+
+.Contact form button:hover {
+    transform: scale(99%);
+    box-shadow: none;
+}
+
+.Contact .contact-bottom {
+    padding-bottom: 10rem;
+}
+
+.Contact .contact-bottom a {
+    text-decoration: none;
+}
+
+.Contact .card-bonus {
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 0.7),
+    0px 0px 5px rgb(0 0 0 / 0.7);
+    margin: auto;
+}
+
+.Contact .card-bonus img{
+    margin: auto;
+}
+/* footer */
+footer {
+    left: 0;
+    right: 0;
+    background-color: rgb(225, 249, 250);
+    text-align: center;
+    padding: 2rem;
+}
+
+/* media query */
+
+
+@media (max-width: 992px) {
+    html {
+        font-size: 90%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 85%;
+    }
+
+    .hero-right img {
+        width: 300px;
+        height: 284px;
+    }
+
+    .hero-left {
+        text-align: center;
+    }
+
+    .Profile .profile-judul,
+    .Project .project-judul,
+    .Contact .contact-judul {
+        margin-top: 10rem;
+    }
+
+    .Contact iframe {
+        width: 400px;
+        height: 250px;
+    }
+    
+    .Contact form {
+        margin-top: 0;
+    }
+
+    .Contact .card-bonus img {
+        width: 250px;
+        height: 250px;
+    }
+    
+}
+
+/* hp */
+@media (max-width: 576px) {
+    html {
+        font-size: 75%;
+    }
+    .Contact iframe {
+        width: 80%;
+        height: 250px;
+    }
+    .Contact .contact-top {
+        width: 80%;
+        margin: auto;
+    }
+    
+}
